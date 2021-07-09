@@ -8,6 +8,11 @@ import {
   Pressable,
   StyleSheet,
 } from 'react-native'
+import FirstRow from '../components/FirstRow'
+import SecondRow from '../components/SecondRow'
+import ThirdRow from '../components/ThirdRow'
+import FourthRow from '../components/FourthRow'
+import LastRow from '../components/LastRow'
 import { widthPercentageToDP, heightPercentageToDP } from '../../utils/scaler'
 
 function Home() {
@@ -30,6 +35,16 @@ function Home() {
             >
               <Text style={styles.textStyle}>X</Text>
             </Pressable>
+            <View style={{ flex: 1, flexDirection: 'column' }}>
+              <View style={{ flex: 2, backgroundColor: '#1c1c1c' }}>
+                <Text>hey</Text>
+              </View>
+              <FirstRow />
+              <SecondRow />
+              <ThirdRow />
+              <FourthRow />
+              <LastRow />
+            </View>
           </View>
         </View>
       </Modal>
@@ -54,17 +69,8 @@ const styles = StyleSheet.create({
     width: '90%',
     height: '80%',
     margin: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#1c1c1c',
     borderRadius: 20,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
   },
   button: {
     borderRadius: 20,
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   buttonOpen: {
-    backgroundColor: '#F194FF',
+    backgroundColor: '#648c1c',
   },
   buttonClose: {
     backgroundColor: '#2196F3',
